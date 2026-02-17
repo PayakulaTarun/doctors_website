@@ -1,0 +1,479 @@
+/* About Page Styles */
+.about-page {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #f8fcfb;
+    overflow-x: hidden;
+}
+
+/* Navbar styling is shared or handled inline currently in other pages, 
+   but for consistency we might want to standardise. 
+   For now, we'll use the same floating pill style as Symptoms page 
+   since the user liked it "exactly like the image". */
+.navbar-pill {
+    background: #fff;
+    width: 90%;
+    max-width: 1200px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Hero Section */
+.about-hero {
+    max-width: 1200px;
+    margin: 60px auto 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.about-hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-hero-content span {
+    color: #27B992;
+}
+
+.about-hero-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px;
+    font-size: 16px;
+}
+
+.btn-primary-about {
+    background: #27B992;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.btn-primary-about:hover {
+    background: #219e7c;
+}
+
+.about-hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    /* box-shadow: 0 20px 40px rgba(0,0,0,0.1); */
+    /* Image in design seems clean */
+}
+
+/* Stats Section */
+.stats-section {
+    max-width: 1200px;
+    /* Increased max-width to ensure room */
+    margin: 0 auto 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+    flex-wrap: nowrap;
+    /* Force single line */
+}
+
+.stat-card {
+    background: #fff;
+    padding: 30px 20px;
+    /* Reduced side padding slightly to fit better */
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    min-width: 200px;
+    flex: 1;
+    /* Allow cards to grow/shrink equally */
+    white-space: nowrap;
+    /* Keep text inside on one line if possible */
+}
+
+.stat-card h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: #888;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Who We Are Section */
+.who-we-are {
+    max-width: 1200px;
+    margin: 0 auto 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.who-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.who-content span {
+    color: #27B992;
+}
+
+.who-content p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.who-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 20px;
+    background: #f0fcf9;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.who-tab {
+    padding: 10px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #666;
+    font-size: 14px;
+}
+
+.who-tab.active {
+    background: #fff;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.who-image img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Features Section */
+.features-section {
+    padding: 0 20px 120px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.features-section span {
+    color: #27B992;
+}
+
+.features-section>p {
+    color: #888;
+    margin-bottom: 60px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    /* Spacing between cards */
+}
+
+.feature-card {
+    background: #fff;
+    padding: 40px 30px;
+    /* Taller padding */
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: none;
+    /* Clean flat look or very subtle if needed */
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    /* Uniform height */
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Hover effect */
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    /* No generic background, icon handles it or white */
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    /* Larger icon size */
+}
+
+.feature-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #777;
+    /* Softer text color */
+    line-height: 1.6;
+}
+
+/* Trusted By Section */
+.trusted-section {
+    padding: 0 20px 120px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trusted-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.trusted-title span {
+    color: #27B992;
+}
+
+.trusted-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.doc-card-about {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.doc-img-about {
+    height: 250px;
+    background: #eefbf9;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.doc-img-about img {
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.verified-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #27B992;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.doc-info-about {
+    padding: 20px;
+}
+
+.doc-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+}
+
+.doc-spec {
+    color: #27B992;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.doc-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.btn-book-sm {
+    width: 100%;
+    background: #27B992;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* How It Works */
+.how-it-works {
+    text-align: center;
+    padding: 0 20px 120px;
+}
+
+.how-steps {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    /* Reduced gap slightly */
+    margin-top: 60px;
+    text-align: left;
+    /* Align children text left */
+}
+
+.how-step {
+    max-width: 250px;
+    text-align: left;
+    /* Explicit left alignment */
+}
+
+.step-icon-dynamic {
+    font-size: 36px;
+    margin-bottom: 20px;
+    display: inline-block;
+    /* Attempt to replicate the red-yellow look with a gradient */
+    background: -webkit-linear-gradient(45deg, #ff6b6b, #feca57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.how-step h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.how-step p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Safety Section */
+.safety-section {
+    background: #fff;
+    margin: 0 20px 120px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.03);
+}
+
+.safety-icon {
+    width: 60px;
+    height: 60px;
+    background: #fff0f0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #ff6b6b;
+}
+
+.safety-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 40px;
+}
+
+.safety-item {
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.check-icon {
+    color: #27B992;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .about-hero,
+    .who-we-are {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-hero-content p {
+        margin: 0 auto 30px;
+    }
+
+    .features-grid,
+    .trusted-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .how-steps {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .safety-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .safety-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+}

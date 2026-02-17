@@ -1,0 +1,610 @@
+/* Doctor Profile Page Styles */
+.profile-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding-bottom: 0;
+}
+
+:root {
+    --primary-color: #27B992;
+    --text-dark: #333;
+    --text-light: #666;
+    --border-color: #eee;
+}
+
+/* --- Header Area --- */
+.profile-header-area {
+    padding: 130px 10% 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.back-btn-wrapper {
+    position: absolute;
+    left: 5%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e6fcf5;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+}
+
+.back-text {
+    font-size: 14px;
+    color: #888;
+    cursor: pointer;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* --- Main Layout --- */
+.profile-content {
+    max-width: 1300px;
+    margin: 0 auto 50px;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    gap: 30px;
+}
+
+/* --- Left Column --- */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Common Card Style */
+.profile-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+/* Doctor Basic Info Card */
+.doctor-header-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    position: relative;
+}
+
+.verified-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--primary-color);
+    font-size: 24px;
+}
+
+.doc-profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f8f9fa;
+}
+
+.doc-info-main h2 {
+    font-size: 26px;
+    margin: 10px 0 5px;
+    color: var(--text-dark);
+}
+
+.doc-info-main .specialty-text {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.stars {
+    color: orange;
+    display: flex;
+    gap: 3px;
+    font-size: 14px;
+}
+
+.rating-count {
+    color: #999;
+    font-size: 12px;
+}
+
+.badges-row {
+    display: flex;
+    gap: 10px;
+}
+
+.status-badge {
+    background: #e6fcf5;
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.exp-badge {
+    background: #f0f7ff;
+    color: #007bff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* Quick Stats Row */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.stat-box {
+    background: #e6fcf5;
+    padding: 15px 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    /* Icon left or top? Image shows icon left usually */
+    align-items: center;
+    /* Actually looks like: Icon top left/center? Let's verify image. Looks like Icon + Col for label/value or Icon top. Let's do Row */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.stat-icon {
+    width: 36px;
+    height: 36px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.stat-text h5 {
+    font-size: 10px;
+    color: #888;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.stat-text p {
+    font-size: 13px;
+    color: #333;
+    font-weight: 700;
+    margin: 3px 0 0;
+}
+
+/* Sections */
+.section-header {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    padding-left: 10px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    /* Align with check circle center */
+    top: 10px;
+    bottom: 30px;
+    width: 2px;
+    background: #eee;
+    z-index: 1;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid var(--primary-color);
+    /* Green ring */
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.timeline-content h4 {
+    margin: 0 0 5px;
+    font-size: 15px;
+    color: #333;
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 13px;
+    color: #888;
+}
+
+/* Services Tags */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.service-tag {
+    background: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Clinic Location */
+.clinic-card-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clinic-info {
+    flex: 1;
+}
+
+.clinic-info h4 {
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.clinic-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.clinic-hours {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #333;
+    display: inline-block;
+}
+
+.clinic-map {
+    width: 200px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.clinic-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Right Column --- */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Booking Widget */
+.booking-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.booking-header span {
+    font-size: 14px;
+    color: #666;
+}
+
+.booking-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.date-section {
+    margin-bottom: 25px;
+}
+
+.date-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.view-cal {
+    color: var(--primary-color);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.dates-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.date-item {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px 5px;
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+}
+
+.date-item.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.date-item h5 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+.date-item p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Time Slots */
+.slots-section {
+    margin-bottom: 30px;
+}
+
+.slots-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.time-slot {
+    border: 1px solid #e6fcf5;
+    background: #f0fdf9;
+    color: var(--primary-color);
+    font-size: 11px;
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.time-slot:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-book-lg {
+    width: 100%;
+    background: var(--primary-color);
+    color: white;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    width: 100%;
+    background: white;
+    color: #ff6b6b;
+    padding: 14px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.secure-note {
+    text-align: center;
+    font-size: 11px;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Need Help Card */
+.help-card {
+    background: #e6fcf5;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+.help-card h3 {
+    color: var(--primary-color);
+    margin: 0 0 10px;
+}
+
+.help-card p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.chat-link {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+/* Patient Reviews */
+.reviews-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.view-all-reviews {
+    font-size: 12px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.review-card {
+    background: #fafbfb;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.review-user-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.review-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.review-meta h5 {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.review-meta span {
+    font-size: 10px;
+    color: #999;
+}
+
+.review-stars {
+    margin-left: auto;
+    color: orange;
+    font-size: 10px;
+}
+
+.review-text {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .profile-content {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .clinic-card-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .clinic-map {
+        width: 100%;
+    }
+}

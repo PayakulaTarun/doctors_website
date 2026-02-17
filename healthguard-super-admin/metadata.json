@@ -1,0 +1,8 @@
+{
+  "name": "HealthGuard Super Admin",
+  "description": "A premium, high-performance SaaS dashboard for managing doctors, users, appointments, and platform-wide financial operations with real-time analytics and detailed control systems.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

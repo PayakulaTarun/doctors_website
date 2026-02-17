@@ -1,0 +1,8 @@
+{
+  "name": "HealthGuard Pro - Doctor Dashboard",
+  "description": "A premium medical dashboard for doctors featuring patient management, real-time schedule tracking, earnings analytics, and AI-powered consultation summaries.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

@@ -1,0 +1,439 @@
+/* Specialties Page Styles */
+.specialties-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --primary-color: #27B992;
+    --bg-light: #f8f9fa;
+    --text-dark: #333;
+    --text-gray: #666;
+}
+
+/* Hero Section */
+.spec-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 140px 10% 80px;
+    background: #f0fbf9;
+    /* Light mint background match */
+    max-width: 100%;
+    /* Full width background */
+    margin: 0 auto;
+}
+
+.spec-hero-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.spec-hero-content h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.spec-hero-content p {
+    font-size: 16px;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.spec-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.spec-tag-pill {
+    font-size: 11px;
+    color: #27B992;
+    background: #e6fcf5;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.spec-hero-image {
+    flex: 1;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 600px;
+}
+
+.spec-hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+}
+
+/* Browse By Section */
+.browse-section {
+    text-align: center;
+    padding: 60px 10%;
+    background: #fff;
+}
+
+.section-head {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.browse-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.browse-card {
+    background: #FAFAFA;
+    /* Light clean gray */
+    border: none;
+    /* No border as per image */
+    padding: 35px 30px;
+    border-radius: 20px;
+    /* More rounded */
+    text-align: left;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.browse-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.browse-icon-box {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.browse-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #333;
+}
+
+.browse-card p {
+    font-size: 14px;
+    color: #999;
+    margin: 0 0 25px;
+    font-weight: 400;
+}
+
+.browse-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Featured Excellence - Staggered Layout Update */
+.featured-section {
+    padding: 60px 10%;
+    background: #f0fbf9;
+    /* Matching the hero background flow usually, or white? Image shows greenish background for section? No, looks like white or very light mint. Let's stick to page flow. */
+    background: #f8fcfb;
+    /* Subtle transition */
+}
+
+/* Flex container for the two columns */
+.featured-grid {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+    /* Important for alignment */
+}
+
+.featured-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    /* Increased gap */
+}
+
+/* Offset the second column */
+.featured-col.col-right {
+    margin-top: 100px;
+    /* Significant offset as per image */
+}
+
+.feature-card {
+    background: #fff;
+    border: none;
+    padding: 40px;
+    border-radius: 25px;
+    /* Softer rounded corners */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    /* Soft shadow */
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon-box {
+    width: 60px;
+    height: 60px;
+    background: #f4f6f8;
+    /* Light gray bg for icon */
+    border-radius: 16px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    /* Large emoji size */
+}
+
+.feature-content h3 {
+    font-size: 20px;
+    margin: 0 0 12px;
+    color: #333;
+    font-weight: 700;
+}
+
+.feature-content p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 90%;
+}
+
+.feature-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+}
+
+.feature-link {
+    font-size: 13px;
+    color: #27B992;
+    /* Teal color text */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-book-feature {
+    background: #27B992;
+    /* Teal button */
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(39, 185, 146, 0.3);
+}
+
+.btn-book-feature:hover {
+    background: #21a380;
+}
+
+
+/* Care Stages */
+.stage-section {
+    padding: 60px 10%;
+    background: #fcfcfc;
+}
+
+.stages-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stage-group {
+    margin-bottom: 50px;
+}
+
+.stage-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #27B992;
+    border-left: 4px solid #27B992;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.stage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stage-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.stage-card h4 {
+    font-size: 15px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.stage-card p {
+    font-size: 11px;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.stage-link {
+    font-size: 11px;
+    color: #27B992;
+    font-weight: 600;
+}
+
+/* Directory */
+.directory-section {
+    padding: 80px 10%;
+    background: #fff;
+}
+
+.directory-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.directory-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.directory-header-row h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.directory-search {
+    position: relative;
+    width: 300px;
+}
+
+.directory-search input {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: 1px solid #eee;
+    background: #fff;
+    border-radius: 30px;
+    font-size: 13px;
+    outline: none;
+    color: #666;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #bbb;
+    font-size: 14px;
+}
+
+.directory-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 100px;
+    /* Wide gap between columns */
+    row-gap: 0;
+}
+
+.directory-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    color: #444;
+    /* Darker grey text */
+    padding: 25px 0;
+    border-bottom: 1px solid #f0f0f0;
+    /* Light separator */
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.directory-item:hover {
+    color: var(--primary-color);
+}
+
+.dir-icon-img {
+    font-size: 24px;
+    /* Emoji size */
+    width: 30px;
+    text-align: center;
+}
+
+/* Footer styles moved to components/Footer.css */
+
+/* Responsive */
+@media (max-width: 900px) {
+    .spec-hero {
+        flex-direction: column;
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .spec-hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .browse-grid,
+    .stage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-grid {
+        flex-direction: column;
+    }
+
+    .featured-col.col-right {
+        margin-top: 0;
+    }
+
+    .directory-list {
+        grid-template-columns: 1fr;
+    }
+}

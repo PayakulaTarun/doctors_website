@@ -1,0 +1,586 @@
+/* Find Doctors Page Styles */
+.find-doctors-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    /* Light background for the whole page */
+    padding-bottom: 0;
+}
+
+/* Reusing basic variable colors from Home if possible, else defining local */
+:root {
+    --primary-color: #27B992;
+}
+
+/* --- Finder Header Section --- */
+.finder-header {
+    background: white;
+    padding: 140px 5% 60px;
+    /* Top padding to account for fixed navbar */
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.finder-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.finder-subtitle {
+    color: #777;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    line-height: 1.5;
+}
+
+/* Search Bar in Header */
+.finder-search-box {
+    background: white;
+    border: 1px solid #eee;
+    padding: 15px 20px;
+    border-radius: 50px;
+    /* Pill shape */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.finder-search-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 15px;
+    border-right: 1px solid #f0f0f0;
+}
+
+.finder-search-field:last-of-type {
+    border-right: none;
+}
+
+.finder-search-field label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.finder-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+}
+
+.finder-input-wrapper input,
+.finder-input-wrapper select {
+    border: none;
+    outline: none;
+    font-size: 13px;
+    width: 100%;
+    color: #555;
+    background: transparent;
+}
+
+.finder-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* --- Main Layout: Filters + List --- */
+.finder-content {
+    display: flex;
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 0 30px;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* --- Sidebar Filters --- */
+.filters-sidebar {
+    width: 280px;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    flex-shrink: 0;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.filter-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.clear-btn {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group h4 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Increased gap */
+    font-size: 15px;
+    /* Slightly larger */
+    color: #777;
+    /* Softer gray */
+    cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    /* Rounded corners */
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+    background-color: transparent;
+    /* Keep distinct checkmark style if easier, or solid */
+    border-color: var(--primary-color);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2327B992'%3E%3Cpath d='M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z'/%3E%3C/svg%3E");
+    background-size: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.search-input-small {
+    width: 100%;
+    padding: 10px 15px 10px 35px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 13px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="%23999" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>') no-repeat 12px center;
+    outline: none;
+}
+
+/* Availability Toggles */
+.availability-toggles {
+    display: flex;
+    gap: 8px;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    /* Smooth rounded */
+    font-size: 13px;
+    color: #777;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.toggle-btn.active {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: white;
+    /* Image shows white bg with colored border/text for active sometimes, checking image... actually image has light teal fill? */
+    /* Re-checking image: All button has borders. "Today" and "Tomorrow" have gray borders */
+    background: #e6fcf5;
+    /* Light teal fill matches typical active state */
+}
+
+/* Sliders */
+.range-slider-container {
+    padding: 0 5px;
+}
+
+.range-slider {
+    width: 100%;
+    accent-color: var(--primary-color);
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Rating Stars */
+.rating-select {
+    display: flex;
+    gap: 5px;
+    color: #ddd;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.rating-select .active {
+    color: #FFD700;
+}
+
+.apply-btn {
+    width: 100%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    /* Full rounded pill */
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+/* --- Doctor List --- */
+.doctors-list-section {
+    flex: 1;
+}
+
+/* --- List Header --- */
+.list-header {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.doctors-found {
+    font-size: 16px;
+    color: #999;
+    font-weight: 400;
+}
+
+.doctors-found b {
+    color: #333;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.sort-options {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    color: #888;
+    align-items: center;
+}
+
+.sort-item {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 8px 20px;
+    transition: all 0.2s;
+}
+
+.sort-item.active {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    background: transparent;
+}
+
+/* Doctor Card Horizontal */
+.doctor-card-horizontal {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s;
+}
+
+.doctor-card-horizontal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.card-image-col {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+}
+
+.card-image-col img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* Circular images match design */
+    object-fit: cover;
+    border: 3px solid #f8f9fa;
+}
+
+.availability-tag {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e6fcf5;
+    color: var(--primary-color);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.card-info-col {
+    flex: 2;
+    text-align: left;
+}
+
+.card-info-col h3 {
+    margin: 0 0 5px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.doc-specialty {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.doc-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.doc-detail-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    background: #f8f9fa;
+    border: none;
+    /* Removed border */
+    padding: 6px 16px;
+    border-radius: 6px;
+    /* Less rounded, more soft rect */
+    font-size: 12px;
+    color: #777;
+    font-weight: 500;
+}
+
+.card-action-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: right;
+    border-left: 1px solid #f0f0f0;
+    padding-left: 30px;
+    height: 100%;
+}
+
+.price-row {
+    margin-bottom: 15px;
+}
+
+.fee-label {
+    font-size: 12px;
+    color: #888;
+    display: block;
+}
+
+.fee-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.slot-container {
+    background: #f9fbfc;
+    border: 1px solid #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.slot-label {
+    font-size: 11px;
+    color: #999;
+    display: block;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.slot-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    display: block;
+    text-align: left;
+}
+
+.btn-book-sm {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.view-profile {
+    font-size: 12px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- Trust Banner --- */
+.trust-banner {
+    background: #d1f1e9;
+    /* Light teal bg */
+    border-radius: 30px;
+    margin: 50px auto 0;
+    max-width: 1300px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.trust-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.trust-icon-box {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.trust-item h4 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.trust-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .finder-content {
+        flex-direction: column;
+    }
+
+    .filters-sidebar {
+        width: 100%;
+    }
+
+    .trust-banner {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .doctor-card-horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .card-action-col {
+        width: 100%;
+        align-items: flex-start;
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid #f0f0f0;
+        padding-top: 20px;
+    }
+}
